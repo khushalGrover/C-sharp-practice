@@ -9,11 +9,8 @@ int main(int argc, char const *argv[])
     for(int i=0;i<=b;i++)
     {
         cout<<"I am hacking your pc "<< i <<" timed"<<endl;
-     
     }
 
-    
-    
     cout<<"program ended";
     cin>>a;
     return 0;
