@@ -24,6 +24,23 @@ strings
 print(dd)
 print("type of this ",type(d))
 
+# some other function on strings..
+firstName = "khUShal Grover"
+firstName.lower()
+print(firstName)
+# or we can directly use print(firstName.lower)
+firstName = firstName.lower()
+print(firstName)                # khushal grover
+print(firstName.capitalize())   # Khushal grover
+print(firstName.title())        # Khushal Grover
+print("is lower",firstName.islower())      # true # check is in lower case
+print("is alpha",firstName.isalpha())      # true # check is all alphabets
+print("is digit",firstName.isdigit())      # false # check is it contain numbers
+secName = input("whats ur name? ").strip() # strip remove useless space
+print("lenght of secName var is {}".format(len(secName))) # here we are using format function
+
+
+
 # list
 e = [10, 20, 30]
 print("element of d ", type(e)," is : ", e)
@@ -32,7 +49,7 @@ print(e)
 
 #tuple
 months = ("jan", "feb", "mar")
-print(months)
+print(type(months))
 # months.insert(0,"khushal") Error bcz tuple are imputeable so we can not modify...
  
 # set
@@ -45,4 +62,4 @@ print(f)
 # dictionary : key/value
 g = {1:"khushal", 2:"sunny"}
 print(g[2])
-# print(type(g[2]))
+print(type(g))
