@@ -38,6 +38,7 @@ print("is alpha",firstName.isalpha())      # true # check is all alphabets
 print("is digit",firstName.isdigit())      # false # check is it contain numbers
 secName = input("whats ur name? ").strip() # strip remove useless space
 print("lenght of secName var is {}".format(len(secName))) # here we are using format function
+print("lenght of secName var is {0} and firstName var is {1}".format(len(secName), len(firstName))) 
 
 
 
