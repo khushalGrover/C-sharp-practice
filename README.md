@@ -1,1 +1,1 @@
-# C-sharp-practice || Python || c/C++
+# Practices of   C#(sharp) || Python || c/C++ 
