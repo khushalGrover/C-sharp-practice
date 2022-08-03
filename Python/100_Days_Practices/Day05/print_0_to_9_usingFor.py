@@ -2,5 +2,6 @@ for number in range(0, 10):
     print(number)
 
 print("\n\n")
-for i in range(1, 11, 3):
+# print 3 table
+for i in range(3, 31, 3):
     print(i)
