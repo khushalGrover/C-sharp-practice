@@ -1,4 +1,5 @@
 # password generator Project
+
 import random
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C','D','E',
@@ -12,24 +13,43 @@ nr_symbols = int(input("How many sybols would you like?\n"))
 nr_numbers = int(input("how many numbers would you like?\n"))
 
 
-
-# METHOD 1    EASY
 password = ""
+# # METHOD 1    EASY
+# 
 
-for char in range(1, nr_letters + 1):
-    random_char = random.choice(letters)
-    # print(random_char)
-    password += random_char 
+# for char in range(1, nr_letters + 1):
+#     random_char = random.choice(letters)
+#     # print(random_char)
+#     password += random_char 
 
-for char in range(1, nr_symbols + 1):
-    random_sybols = random.choice(sybols)
-    password += random_sybols
+# for char in range(1, nr_symbols + 1):
+#     random_sybols = random.choice(sybols)
+#     password += random_sybols
 
-for char in range(1, nr_numbers + 1):
-    random_numbers = random.choice(numbers)
-    password += random_numbers
+# for char in range(1, nr_numbers + 1):
+#     random_numbers = random.choice(numbers)
+#     password += random_numbers
 
-print(password)
+# print(password)
 
 
+# Method 2      HARD
+password_list = []
+
+for char in range (1, nr_letters + 1):
+    password_list.append(random.choice(letters))
+
+for char in range (1, nr_symbols + 1):
+    password_list.append(random.choice(sybols))
+
+for char in range (1, nr_numbers + 1):
+    password_list.append(random.choice(numbers))
+
+# Rabdomize order of chracters (passwordList elements)
+random.shuffle(password_list)
+
+
+for char in password_list:
+    password += char
+print("Password is: {0}".format(password))
 
