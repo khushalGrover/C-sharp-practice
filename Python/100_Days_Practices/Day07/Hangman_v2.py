@@ -1,93 +1,7 @@
 import random
-
-stages = ['''
-  +------+
-  |      |
-  o      |
- /|\     |
- / \     |
-         |
-==========
-''',
-'''
-  +------+
-  |      |
-  o      |
- /|\     |
- /       |
-         |
-==========
-''',
-'''
-  +------+
-  |      |
-  o      |
- /|\     |
-         |
-         |
-==========
-''',
-'''
-  +------+
-  |      |
-  o      |
- /|      |
-         |
-         |
-==========
-''',
-
-'''
-  +------+
-  |      |
-  o      |
- /       |
-         |
-         |
-==========
-''',
-'''
-  +------+
-  |      |
-  o      |
-         |
-         |
-         |
-==========
-''',
-'''
-  +------+
-  |      |
-         |
-         |
-         |
-         |
-==========
-''',
-'''
-  +------+
-         |
-         |
-         |
-         |
-         |
-==========
-''',
-'''
-W         W     IIIII    NN   N
- W   W   W        I      N N  N
-  W  w  W         I      N  N N
-   W   W        IIIII    N   NN
- 
-''',
-'''
-L         oooo      ssss   EEEEEE
-L        o    o    ss      E 
-L        o    o     ssss   EEE
-L        o    o       ss   E
-LLLLL     oooo     ssss    EEEEEE
-'''
-]
+from hangman_words import word_list
+from hangman_art import logo, stages
+# from hangman_art import stages
 
 word_list = ["apple", "banana","camel", "school"]
 
@@ -97,6 +11,7 @@ chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
 lives = 7
+print(logo)
 
 print(f'passt, the solution is {chosen_word}')
 
@@ -108,8 +23,13 @@ for _ in range(word_length):
 end_Of_Game = False
 
 while not end_Of_Game:
+    # print(display[])
     guess = input("Guess a letter: ").lower() # convert user input into lower case
     
+    if guess in display:
+        print(f"You've already guessed {guess}")
+
+
     # Check guess letter
     for position in range(word_length):
         letter = chosen_word[position]
@@ -122,6 +42,7 @@ while not end_Of_Game:
             
     if guess not in chosen_word:
         lives -= 1
+        print(f"You Gussed {guess}, that's not in the word. You lose a life.")
         if lives == 0:
             end_Of_Game = True 
             print("you Lose")
