@@ -12,7 +12,7 @@ void Draw_Filled_Rect(int r, int c)
         }
         cout<<endl;
     }
-    cout<<"Filled Rectangle";
+    cout<<"  Filled Rectangle";
 }
 
 void Draw_Empty_Rect(int r, int c) 
@@ -35,12 +35,11 @@ void Draw_Empty_Rect(int r, int c)
         cout<<endl;
     }
 
-    cout<<"Empty Rectangle";
+    cout<<"  Empty Rectangle";
 }
 
 void Draw_Triangle(int h)
 {
-    int count=0;
     for(int i=1; i<=h; i++)
     {
         for(int j=1; j<=h; j++)
@@ -53,6 +52,42 @@ void Draw_Triangle(int h)
         }
         cout<<endl;
     }
+    cout<<" Triangle";
+}
+
+void Draw_Number_Triangle(int h)
+{
+    for(int i=1; i<=h; i++)
+    {
+        for(int j=1; j<=h; j++)
+        {
+            cout<<i<<" ";
+            if(j == i)
+            {
+                break;
+            }
+        }
+        cout<<endl;
+    }
+    cout<<"  Number Triangle";
+}
+
+void Draw_Counting_Number_Triangle(int h)
+{
+    for(int i=1; i<=h; i++)
+    {
+        for(int j=1; j<=h; j++)
+        {
+            cout<<i+j<<" ";
+            if(j == i)
+            {
+                break;
+            }
+            
+        }
+        cout<<endl;
+    }
+    cout<<"  Counting Number Triangle";
 }
 
 void Draw_Rombus(int h)
@@ -69,26 +104,35 @@ void Draw_Rombus(int h)
                 {
                     cout<<"* ";
                 }
-                
-                
                 break;
             }
         }
         cout<<endl;
     }
+    cout<<"  Rombus";
 }
-
 
 int main(int argc, char const *argv[]) 
 {
-    int rows=5, columns=10, height=5;
+    int rows=5, columns, height;
+    int a;
+    std :: cin>>a;
+    cin>>columns;
+    cin>>height;
+    cout<<"input is taken"<<height<<endl;
 
     Draw_Filled_Rect(rows, columns);
     cout<<"\n\n\n______________\n\n\n";
+
     Draw_Empty_Rect(rows, columns);
     cout<<"\n\n\n______________\n\n\n";
+
     Draw_Triangle(height);
     cout<<"\n\n\n______________\n\n\n";
+
+    Draw_Number_Triangle(height);
+    cout<<"\n\n\n______________\n\n\n";
+    
     Draw_Rombus(height);
 
     /* code */
