@@ -8,7 +8,7 @@ int main()
 
 // inverted pattern
     /*
-    
+
     for(int i=1; i<=n; i++)
     {
         for (int j = 1; j <= n+1-i; j++)
@@ -20,7 +20,7 @@ int main()
     */
 // 0-1 pattern
    /*
-    
+
     for(int i=1; i<=n; i++)
     {
         for(int j=1; j<=i; j++)
@@ -56,9 +56,9 @@ int main()
         for(int j=1; j<=i; j++)
         {
             cout<<j<<" ";
-            
+
         }
-        
+
         cout<<endl;
     }
  */
@@ -72,12 +72,12 @@ int main()
         {
             cout<<"  ";
         }
-        
+
         for(; j<=n+i-1;j++)
         {
             cout<<"*"<<" ";
         }
-        
+
         cout<<endl;
     }
     cout<<"first part runned";
@@ -91,12 +91,12 @@ int main()
         {
             cout<<"  ";
         }
-        
+
         for(; j<=n+i-1;j++)
         {
             cout<<"*"<<" ";
         }
-        
+
         cout<<endl;
     }
 }
