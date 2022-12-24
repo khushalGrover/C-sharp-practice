@@ -17,6 +17,4 @@ int main(int argc, char const *argv[])
 
   cout<<ans;
   return 0;
-
-
 }
