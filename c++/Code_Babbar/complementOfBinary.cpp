@@ -3,31 +3,26 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  int i=0, n=0, ans=0;
-  cin>>n;
+  int n=0,m=0,mask=0;
 
-
-
-  // converting user decimal number to binary....
-  while(n!=0)
+  cin>> n;
+  m=n;
+  if(n==0)
   {
-    int bit = n & 1;
-    ans = ans + (bit * pow(10, i));
-    n = n >> 1; // similar to n = n / 2;
-    i++;
+      cout<<1;
+  }
+  else{
+      while(m!=0)
+      {
+        mask = (mask << 1) | 1;
+        m = m >> 1;
+      }
+
+      int ans = (~n) & mask;
+
+      cout<<ans;
   }
 
 
-// complementing
-
-
-
-
-
-
-
-
-
-  cout<<ans;
   return 0;
 }
